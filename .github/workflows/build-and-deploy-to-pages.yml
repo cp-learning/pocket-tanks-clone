@@ -15,8 +15,8 @@ on:
 
 env:
   GODOT_VERSION: 3.5.1
-  EXPORT_NAME: test-project
-  PROJECT_PATH: test-project
+  EXPORT_NAME: HTML5
+  PROJECT_PATH: pocket-tanks
   
 jobs:
   export-web:
