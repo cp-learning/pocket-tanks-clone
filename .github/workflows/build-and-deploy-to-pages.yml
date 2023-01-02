@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 env:
-  GODOT_VERSION: mono-3.5.1
+  GODOT_VERSION: 3.5.1
   EXPORT_NAME: test-project
   PROJECT_PATH: test-project
   
@@ -23,7 +23,7 @@ jobs:
     name: Web Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci3.5.1
+      image: barichello/godot-ci:mono-3.5.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
