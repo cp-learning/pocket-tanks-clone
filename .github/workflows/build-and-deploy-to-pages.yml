@@ -17,14 +17,13 @@ env:
   GODOT_VERSION: 3.5.1
   EXPORT_NAME: test-project
   PROJECT_PATH: test-project
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  
 jobs:
   export-windows:
     name: Windows Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci:$GODOT_VERSION
+      image: barichello/godot-ci:mono-3.5.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -49,7 +48,7 @@ jobs:
     name: Linux Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci:$GODOT_VERSION
+      image: barichello/godot-ci:mono-3.5.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -74,7 +73,7 @@ jobs:
     name: Web Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci:$GODOT_VERSION
+      image: barichello/godot-ci:mono-3.5.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -107,7 +106,7 @@ jobs:
     name: Mac Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci:$GODOT_VERSION
+      image: barichello/godot-ci:mono-3.5.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
