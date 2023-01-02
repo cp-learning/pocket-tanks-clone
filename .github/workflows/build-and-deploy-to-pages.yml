@@ -35,6 +35,7 @@ jobs:
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable.mono ~/.local/share/godot/templates/${GODOT_VERSION}.stable.mono
       - name: Web Build
         run: |
+          ls -la
           mkdir -v -p build/web
           cd $PROJECT_PATH
           godot -v --export "HTML5" ../build/web/index.html
